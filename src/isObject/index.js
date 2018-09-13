@@ -9,6 +9,8 @@
  */
 const isObject = data => {
   /* your logic here...*/
+  return Object.prototype.toString.call(data) === '[object Object]';
+
 };
 
 export default isObject;

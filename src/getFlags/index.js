@@ -7,6 +7,13 @@
  */
 const getFlags = arr => {
   /* your logic here...*/
+  let res = [];
+  
+  for( let i of arr ) {
+    res = res.concat(i.flags);
+  }
+  
+  return res;
 };
 
 export default getFlags;

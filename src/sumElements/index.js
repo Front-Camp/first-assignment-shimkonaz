@@ -12,6 +12,25 @@
  */
 const sumElements = arr => {
   /* your logic here...*/
+  let sum = 0;
+  
+  for(let item of arr) {
+    // if(item === Infinity) continue;
+    // if(item === -Infinity) continue;
+    // if(Number.isNaN(item)) continue;
+    let parsedItem;
+    
+    if(typeof item === 'string' && item.indexOf('px') > -1) {
+        parsedItem = item.slice(0, item.indexOf('px'));
+    } else {
+      parsedItem = +item;
+    }
+
+    if(Number.isFinite(parsedItem)) {
+      sum += parsedItem;
+    }
+  }
+  return sum;
 };
 
 export default sumElements;

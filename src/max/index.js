@@ -8,6 +8,16 @@
 */
 const max = arr => {
   /* your logic here...*/
+  let max = 0;
+
+  for (let i of arr) {
+    if(Number.isFinite(i)) {
+      if(max < i) max = i;
+    }
+  }
+
+  return max;
+
 };
 
 export default max;

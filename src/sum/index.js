@@ -11,6 +11,10 @@
 */
 const sum = (a, b) => {
   /* your logic here...*/
+  if(Number.isFinite(a) && Number.isFinite(b)) {
+    return a + b;
+  }  
+  throw new Error;
 };
 
 export default sum;
